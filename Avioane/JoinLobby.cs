@@ -25,5 +25,10 @@ namespace Avioane
         {
             main.SubmitJoinGame(this.gameID.Text);
         }
+
+        private void JoinLobby_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            main.ServerDisconnect();
+        }
     }
 }

@@ -30,5 +30,10 @@ namespace Avioane
         {
             this.enemyName.Text = this.main.EnemyName;
         }
+
+        private void Lobby_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            main.ServerDisconnect();
+        }
     }
 }

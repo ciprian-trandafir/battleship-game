@@ -18,5 +18,10 @@ namespace Avioane
         {
             main.SubmitInputName(this.nameInput.Text);
         }
+
+        private void InputName_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            main.ServerDisconnect();
+        }
     }
 }

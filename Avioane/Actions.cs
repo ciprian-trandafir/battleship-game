@@ -23,5 +23,10 @@ namespace Avioane
         {
             main.SubmitShowJoinGame();
         }
+
+        private void Actions_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            main.ServerDisconnect();
+        }
     }
 }

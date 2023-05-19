@@ -75,11 +75,12 @@ namespace Avioane
 
         private async void SendServerMessage(string eventName, string data)
         {
-            //await client.EmitAsync(eventName, data);
-            await Task.Run(() =>
-            {
-                client.EmitAsync(eventName, data);
-            });
+            await client.EmitAsync(eventName, data);
+        }
+
+        public async void ServerDisconnect()
+        {
+            await client.DisconnectAsync();
         }
 
         // --- InputName.cs ---
@@ -104,7 +105,6 @@ namespace Avioane
             this.JoinLobbyForm.Show();
         }
         // --- Actions.cs ---
-
 
         // --- JoinLobby.cs --- 
         public void SubmitJoinGame(string gameCode)
