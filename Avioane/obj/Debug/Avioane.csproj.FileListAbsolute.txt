@@ -1,0 +1,27 @@
+C:\Users\Monica Matei\Desktop\Proiect_SPRC\Avioane\Avioane\bin\Debug\Avioane.exe.config
+C:\Users\Monica Matei\Desktop\Proiect_SPRC\Avioane\Avioane\bin\Debug\Avioane.exe
+C:\Users\Monica Matei\Desktop\Proiect_SPRC\Avioane\Avioane\bin\Debug\Avioane.pdb
+C:\Users\Monica Matei\Desktop\Proiect_SPRC\Avioane\Avioane\obj\Debug\Avioane.csproj.AssemblyReference.cache
+C:\Users\Monica Matei\Desktop\Proiect_SPRC\Avioane\Avioane\obj\Debug\Avioane.csproj.SuggestedBindingRedirects.cache
+C:\Users\Monica Matei\Desktop\Proiect_SPRC\Avioane\Avioane\obj\Debug\Avioane.Form1.resources
+C:\Users\Monica Matei\Desktop\Proiect_SPRC\Avioane\Avioane\obj\Debug\Avioane.Properties.Resources.resources
+C:\Users\Monica Matei\Desktop\Proiect_SPRC\Avioane\Avioane\obj\Debug\Avioane.csproj.GenerateResource.cache
+C:\Users\Monica Matei\Desktop\Proiect_SPRC\Avioane\Avioane\obj\Debug\Avioane.csproj.CoreCompileInputs.cache
+C:\Users\Monica Matei\Desktop\Proiect_SPRC\Avioane\Avioane\obj\Debug\Avioane.exe
+C:\Users\Monica Matei\Desktop\Proiect_SPRC\Avioane\Avioane\obj\Debug\Avioane.pdb
+C:\Users\cipri\Desktop\Avioane\Avioane\bin\Debug\Avioane.exe.config
+C:\Users\cipri\Desktop\Avioane\Avioane\bin\Debug\Avioane.exe
+C:\Users\cipri\Desktop\Avioane\Avioane\bin\Debug\Avioane.pdb
+C:\Users\cipri\Desktop\Avioane\Avioane\obj\Debug\Avioane.csproj.AssemblyReference.cache
+C:\Users\cipri\Desktop\Avioane\Avioane\obj\Debug\Avioane.csproj.SuggestedBindingRedirects.cache
+C:\Users\cipri\Desktop\Avioane\Avioane\obj\Debug\Avioane.Properties.Resources.resources
+C:\Users\cipri\Desktop\Avioane\Avioane\obj\Debug\Avioane.csproj.GenerateResource.cache
+C:\Users\cipri\Desktop\Avioane\Avioane\obj\Debug\Avioane.csproj.CoreCompileInputs.cache
+C:\Users\cipri\Desktop\Avioane\Avioane\obj\Debug\Avioane.exe
+C:\Users\cipri\Desktop\Avioane\Avioane\obj\Debug\Avioane.pdb
+C:\Users\cipri\Desktop\Avioane\Avioane\obj\Debug\Avioane.Game.resources
+C:\Users\cipri\Desktop\Avioane\Avioane\obj\Debug\Avioane.InputName.resources
+C:\Users\cipri\Desktop\Avioane\Avioane\obj\Debug\Avioane.Actions.resources
+C:\Users\cipri\Desktop\Avioane\Avioane\bin\Debug\Newtonsoft.Json.dll
+C:\Users\cipri\Desktop\Avioane\Avioane\bin\Debug\Newtonsoft.Json.xml
+C:\Users\cipri\Desktop\Avioane\Avioane\obj\Debug\Avioane.csproj.CopyComplete
