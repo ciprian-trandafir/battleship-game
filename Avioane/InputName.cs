@@ -16,12 +16,19 @@ namespace Avioane
 
         private void submit_Click(object sender, EventArgs e)
         {
-            main.SubmitInputName(this.nameInput.Text);
+            string playerName = this.nameInput.Text;
+            if (string.IsNullOrWhiteSpace(playerName))
+            {
+                MessageBox.Show("Please input a valid name! 😠", "Error");
+                return;
+            }
+
+            main.SubmitInputName(playerName);
         }
 
-        private void InputName_FormClosing(object sender, FormClosingEventArgs e)
+        protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            main.ServerDisconnect();
+            Application.Exit();
         }
     }
 }

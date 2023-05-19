@@ -69,7 +69,7 @@
             this.Controls.Add(this.gameID);
             this.Controls.Add(this.label1);
             this.Name = "JoinLobby";
-            this.Text = "JoinLobby";
+            this.Text = "Aviaonele • Join Lobby";
             this.ResumeLayout(false);
             this.PerformLayout();
 

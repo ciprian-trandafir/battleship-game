@@ -36,7 +36,7 @@
             // 
             this.createGame.Location = new System.Drawing.Point(92, 87);
             this.createGame.Name = "createGame";
-            this.createGame.Size = new System.Drawing.Size(188, 84);
+            this.createGame.Size = new System.Drawing.Size(314, 86);
             this.createGame.TabIndex = 0;
             this.createGame.Text = "Create Game";
             this.createGame.UseVisualStyleBackColor = true;
@@ -46,7 +46,7 @@
             // 
             this.joinGame.Location = new System.Drawing.Point(92, 237);
             this.joinGame.Name = "joinGame";
-            this.joinGame.Size = new System.Drawing.Size(188, 84);
+            this.joinGame.Size = new System.Drawing.Size(314, 86);
             this.joinGame.TabIndex = 1;
             this.joinGame.Text = "Join Game";
             this.joinGame.UseVisualStyleBackColor = true;
@@ -56,11 +56,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 402);
+            this.ClientSize = new System.Drawing.Size(511, 402);
             this.Controls.Add(this.joinGame);
             this.Controls.Add(this.createGame);
             this.Name = "Actions";
-            this.Text = "Avioanele • Actions";
+            this.Text = "Avioanele • Choose action";
             this.ResumeLayout(false);
 
         }

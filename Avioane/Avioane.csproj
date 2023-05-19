@@ -111,9 +111,13 @@
     <Compile Include="Lobby.Designer.cs">
       <DependentUpon>Lobby.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main.cs">
+    <Compile Include="WaitingLobby.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="WaitingLobby.Designer.cs">
+      <DependentUpon>WaitingLobby.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Actions.resx">
@@ -130,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lobby.resx">
       <DependentUpon>Lobby.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitingLobby.resx">
+      <DependentUpon>WaitingLobby.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

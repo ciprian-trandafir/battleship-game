@@ -24,9 +24,9 @@ namespace Avioane
             main.SubmitShowJoinGame();
         }
 
-        private void Actions_FormClosing(object sender, FormClosingEventArgs e)
+        protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            main.ServerDisconnect();
+            Application.Exit();
         }
     }
 }

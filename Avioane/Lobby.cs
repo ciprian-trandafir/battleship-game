@@ -21,19 +21,20 @@ namespace Avioane
             InitializeComponent();
         }
 
-        public void setLobbyId()
+        public void SetNames(string playerName, string enemyName)
         {
-            this.lobbyID.Text = this.main.GameCode;
-        }
-        
-        public void enemyJoined()
-        {
-            this.enemyName.Text = this.main.EnemyName;
+            this.playerName.Text = playerName;
+            this.enemyName.Text = enemyName;
         }
 
-        private void Lobby_FormClosing(object sender, FormClosingEventArgs e)
+        public void SetTimer(string time)
         {
-            main.ServerDisconnect();
+            this.gameCounter.Text = time;
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

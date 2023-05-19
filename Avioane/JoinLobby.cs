@@ -24,11 +24,12 @@ namespace Avioane
         private void submitGameID_Click(object sender, EventArgs e)
         {
             main.SubmitJoinGame(this.gameID.Text);
+            this.gameID.Text = "";
         }
 
-        private void JoinLobby_FormClosing(object sender, FormClosingEventArgs e)
+        protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            main.ServerDisconnect();
+            Application.Exit();
         }
     }
 }

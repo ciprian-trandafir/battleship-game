@@ -10,21 +10,20 @@ using System.Windows.Forms;
 
 namespace Avioane
 {
-    public partial class Game : Form
+    public partial class WaitingLobby : Form
     {
         Main main;
 
-        public Game(Main main)
+        public WaitingLobby(Main main)
         {
             this.main = main;
             StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
         }
 
-        public void setNames()
+        public void setLobbyId()
         {
-            this.myPlanes.Text = this.main.PlayerName;
-            this.enemyPlanes.Text = this.main.EnemyName;
+            this.lobbyID.Text = this.main.GameCode;
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)

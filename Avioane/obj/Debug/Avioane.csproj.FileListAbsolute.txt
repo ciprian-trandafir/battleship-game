@@ -61,5 +61,6 @@ C:\Users\cipri\Desktop\avioanele-frontend\Avioane\bin\Debug\System.Text.Encoding
 C:\Users\cipri\Desktop\avioanele-frontend\Avioane\bin\Debug\System.Text.Json.xml
 C:\Users\cipri\Desktop\avioanele-frontend\Avioane\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\cipri\Desktop\avioanele-frontend\Avioane\bin\Debug\System.ValueTuple.xml
-C:\Users\cipri\Desktop\avioanele-frontend\Avioane\obj\Debug\Avioane.Lobby.resources
 C:\Users\cipri\Desktop\avioanele-frontend\Avioane\obj\Debug\Avioane.JoinLobby.resources
+C:\Users\cipri\Desktop\avioanele-frontend\Avioane\obj\Debug\Avioane.WaitingLobby.resources
+C:\Users\cipri\Desktop\avioanele-frontend\Avioane\obj\Debug\Avioane.Lobby.resources

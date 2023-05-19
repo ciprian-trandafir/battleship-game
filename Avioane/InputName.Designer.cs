@@ -41,7 +41,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(307, 38);
             this.label1.TabIndex = 0;
-            this.label1.Text = "What is your name?";
+            this.label1.Text = "Enter your name 👇";
             // 
             // nameInput
             // 
@@ -69,7 +69,7 @@
             this.Controls.Add(this.nameInput);
             this.Controls.Add(this.label1);
             this.Name = "InputName";
-            this.Text = "Avioanele • Player name";
+            this.Text = "Avioanele • Player Name";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,17 +1,11 @@
-﻿
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
 using SocketIOClient;
 using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Avioane
 {
-    public class Main : Form
+    public class Main
     {
         public string GameCode;
         
@@ -21,22 +15,27 @@ namespace Avioane
         string BackendUrl = "http://localhost";
         string BackendPort = "3000";
 
+        Boolean gameInProgress = false;
+        Boolean enemyLeft = false;
+
         private SocketIO client;
 
         private InputName InputNameForm;
         private Game GameForm;
         private Actions ActionsFrame;
-        private Lobby LobbyForm;
+        private WaitingLobby WaitingLobbyForm;
         private JoinLobby JoinLobbyForm;
+        private Lobby LobbyForm;
 
         public Main() 
         {
             // initialize all forms
             InputNameForm = new InputName(this);
-            GameForm = new Game();
+            GameForm = new Game(this);
             ActionsFrame = new Actions(this);
-            LobbyForm = new Lobby(this);
+            WaitingLobbyForm = new WaitingLobby(this);
             JoinLobbyForm = new JoinLobby(this);
+            LobbyForm = new Lobby(this);    
 
             InputNameForm.Show();
 
@@ -59,15 +58,88 @@ namespace Avioane
                 ActionsFrame.Invoke((MethodInvoker)delegate
                 {
                     this.ActionsFrame.Hide();
-                    this.LobbyForm.setLobbyId();
-                    this.LobbyForm.Show();
+                    this.WaitingLobbyForm.setLobbyId();
+                    this.WaitingLobbyForm.Show();
                 });
             });
 
             client.On("joined-lobby", response =>
             {
+                gameInProgress = true;
+                enemyLeft = false;
                 this.EnemyName = response.GetValue<string>();
-                this.LobbyForm.enemyJoined();
+                WaitingLobbyForm.Invoke((MethodInvoker)delegate
+                {
+                    this.WaitingLobbyForm.Hide();
+                    this.LobbyForm.Show();
+                    this.LobbyForm.SetNames(this.PlayerName, this.EnemyName);
+                });
+            });
+
+            client.On("success-join-lobby", response =>
+            {
+                gameInProgress = true;
+                enemyLeft = false;
+                this.EnemyName = response.GetValue<string>();
+                JoinLobbyForm.Invoke((MethodInvoker)delegate
+                {
+                    this.JoinLobbyForm.Hide();
+                    this.LobbyForm.Show();
+                    this.LobbyForm.SetNames(this.PlayerName, this.EnemyName);
+                });
+            });
+
+            client.On("update-counter", response =>
+            {
+                if (enemyLeft)
+                {
+                    return;
+                }
+
+                LobbyForm.Invoke((MethodInvoker)delegate
+                {
+                    this.LobbyForm.SetTimer(response.GetValue<string>());
+                });
+            });
+
+            client.On("start-game", response =>
+            {
+                if (enemyLeft)
+                {
+                    return;
+                }
+
+                LobbyForm.Invoke((MethodInvoker)delegate
+                {
+                    this.LobbyForm.Hide();
+                    this.GameForm.setNames();
+                    this.GameForm.Show();
+                });
+            });
+
+            client.On("cancel-game", response => 
+            {
+                if (gameInProgress)
+                {
+                    LobbyForm.Invoke((MethodInvoker)delegate
+                    {
+                        if (this.LobbyForm.Visible)
+                        {
+                            this.LobbyForm.Hide();
+                        }
+
+                        if (this.GameForm.Visible)
+                        {
+                            this.GameForm.Hide();
+                        }
+
+                        this.ActionsFrame.Show();
+                    });
+
+                    enemyLeft = true;
+                    gameInProgress = false;
+                    MessageBox.Show("Your enemy left the game", "Disconnect");
+                }
             });
 
             client.ConnectAsync();
@@ -76,11 +148,6 @@ namespace Avioane
         private async void SendServerMessage(string eventName, string data)
         {
             await client.EmitAsync(eventName, data);
-        }
-
-        public async void ServerDisconnect()
-        {
-            await client.DisconnectAsync();
         }
 
         // --- InputName.cs ---
