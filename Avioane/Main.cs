@@ -1,27 +1,33 @@
-﻿using Newtonsoft.Json;
+﻿
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using SocketIOClient;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Net.Http;
-using System.Net.Sockets;
 using System.Text;
-using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Avioane
 {
     public class Main : Form
     {
-        string GameCode;
-        string PlayerName;
+        public string GameCode;
+        
+        public string PlayerName;
+        public string EnemyName;
+
         string BackendUrl = "http://localhost";
         string BackendPort = "3000";
+
+        private SocketIO client;
 
         private InputName InputNameForm;
         private Game GameForm;
         private Actions ActionsFrame;
-
-        private StreamWriter writer;
+        private Lobby LobbyForm;
+        private JoinLobby JoinLobbyForm;
 
         public Main() 
         {
@@ -29,76 +35,88 @@ namespace Avioane
             InputNameForm = new InputName(this);
             GameForm = new Game();
             ActionsFrame = new Actions(this);
+            LobbyForm = new Lobby(this);
+            JoinLobbyForm = new JoinLobby(this);
 
-            // show inputNameForm
             InputNameForm.Show();
 
+            client = new SocketIO(BackendUrl + ":" + BackendPort);
 
-            TcpClient client = new TcpClient("localhost", 3000);
-            NetworkStream stream = client.GetStream();
-            StreamReader reader = new StreamReader(stream);
-            writer = new StreamWriter(stream);
-            writer.AutoFlush = true;
-
-            Thread receiveThread = new Thread(() =>
+            client.OnConnected += async (sender, e) =>
             {
-                while (true)
-                {
-                    string response = reader.ReadLine();
-                    //ProcessServerResponse(response);
-                }
+                Console.WriteLine("Successfully connected to websocket!");
+            };
+
+            client.On("client-error", response =>
+            {
+                MessageBox.Show(response.GetValue<string>(), "Error");
             });
-            receiveThread.Start();
-        }
-        private void SendEventToServer(StreamWriter writer, string eventName, string eventData)
-        {
-            string payload = $"{eventName}:{eventData}";
-            Console.WriteLine(payload);
-            writer.WriteLine(payload);
+
+            client.On("game-created", response =>
+            {
+                this.GameCode = response.GetValue<string>();
+
+                ActionsFrame.Invoke((MethodInvoker)delegate
+                {
+                    this.ActionsFrame.Hide();
+                    this.LobbyForm.setLobbyId();
+                    this.LobbyForm.Show();
+                });
+            });
+
+            client.On("joined-lobby", response =>
+            {
+                this.EnemyName = response.GetValue<string>();
+                this.LobbyForm.enemyJoined();
+            });
+
+            client.ConnectAsync();
         }
 
-        private void ProcessServerResponse(string response)
+        private async void SendServerMessage(string eventName, string data)
         {
-            Console.WriteLine(response);
+            //await client.EmitAsync(eventName, data);
+            await Task.Run(() =>
+            {
+                client.EmitAsync(eventName, data);
+            });
         }
 
+        // --- InputName.cs ---
         public void SubmitInputName(string PlayerName)
         {
             this.PlayerName = PlayerName;
 
-            SendEventToServer(this.writer, "join-lobby", "aaa");
-
-            InputNameForm.Hide();
-            ActionsFrame.Show();
-
-            Console.WriteLine(this.PlayerName);
+            this.InputNameForm.Hide();
+            this.ActionsFrame.Show();
         }
+        // --- InputName.cs ---
 
+        // --- Actions.cs ---
         public void SubmitCreateGame()
         {
-            this.CreateGame();
+            SendServerMessage("create-game", this.PlayerName);
         }
 
-        private async void CreateGame()
+        public void SubmitShowJoinGame()
         {
-            var dict = new Dictionary<string, string>
-                {
-                    {"playerName", this.PlayerName},
-                };
-
-            HttpClient client = new HttpClient();
-            var content = new StringContent(JsonConvert.SerializeObject(dict), Encoding.UTF8, "application/json");
-            HttpResponseMessage response = await client.PostAsync(BackendUrl + BackendPort + "/games", content);
-
-            if (response.IsSuccessStatusCode)
-            {
-                dynamic responseObject = JsonConvert.DeserializeObject(await response.Content.ReadAsStringAsync());
-                this.GameCode = responseObject.data.game.code;
-            } 
-            else
-            {
-                MessageBox.Show("Something went wrong!", "Error");
-            }
+            this.ActionsFrame.Hide();
+            this.JoinLobbyForm.Show();
         }
+        // --- Actions.cs ---
+
+
+        // --- JoinLobby.cs --- 
+        public void SubmitJoinGame(string gameCode)
+        {
+            this.GameCode = gameCode;
+ 
+            JObject jsonObject = new JObject();
+            jsonObject["playerName"] = this.PlayerName;
+            jsonObject["gameCode"] = this.GameCode;
+
+            SendServerMessage("join-lobby", jsonObject.ToString());
+        }
+        // --- JoinLobby.cs --- 
     }
 }

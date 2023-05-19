@@ -50,6 +50,7 @@
             this.joinGame.TabIndex = 1;
             this.joinGame.Text = "Join Game";
             this.joinGame.UseVisualStyleBackColor = true;
+            this.joinGame.Click += new System.EventHandler(this.joinGame_Click);
             // 
             // Actions
             // 
@@ -59,7 +60,7 @@
             this.Controls.Add(this.joinGame);
             this.Controls.Add(this.createGame);
             this.Name = "Actions";
-            this.Text = "Actions";
+            this.Text = "Avioanele • Actions";
             this.ResumeLayout(false);
 
         }

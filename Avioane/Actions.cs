@@ -18,5 +18,10 @@ namespace Avioane
         {
             main.SubmitCreateGame();
         }
+
+        private void joinGame_Click(object sender, EventArgs e)
+        {
+            main.SubmitShowJoinGame();
+        }
     }
 }

@@ -12,9 +12,23 @@ namespace Avioane
 {
     public partial class Lobby : Form
     {
-        public Lobby()
+        Main main;
+
+        public Lobby(Main main)
         {
+            this.main = main;
+            StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
+        }
+
+        public void setLobbyId()
+        {
+            this.lobbyID.Text = this.main.GameCode;
+        }
+        
+        public void enemyJoined()
+        {
+            this.enemyName.Text = this.main.EnemyName;
         }
     }
 }
