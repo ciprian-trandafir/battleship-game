@@ -1,6 +1,10 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using SocketIOClient;
 using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Avioane
@@ -11,21 +15,23 @@ namespace Avioane
         
         public string PlayerName;
         public string EnemyName;
+        public int PlayerCode;
 
         string BackendUrl = "http://localhost";
         string BackendPort = "3000";
 
+        dynamic planes;
         Boolean gameInProgress = false;
         Boolean enemyLeft = false;
 
         private SocketIO client;
 
-        private InputName InputNameForm;
-        private Game GameForm;
-        private Actions ActionsFrame;
-        private WaitingLobby WaitingLobbyForm;
-        private JoinLobby JoinLobbyForm;
-        private Lobby LobbyForm;
+        public InputName InputNameForm;
+        public Game GameForm;
+        public Actions ActionsFrame;
+        public WaitingLobby WaitingLobbyForm;
+        public JoinLobby JoinLobbyForm;
+        public Lobby LobbyForm;
 
         public Main() 
         {
@@ -54,6 +60,7 @@ namespace Avioane
             client.On("game-created", response =>
             {
                 this.GameCode = response.GetValue<string>();
+                this.PlayerCode = 1;
 
                 ActionsFrame.Invoke((MethodInvoker)delegate
                 {
@@ -80,7 +87,10 @@ namespace Avioane
             {
                 gameInProgress = true;
                 enemyLeft = false;
+                
                 this.EnemyName = response.GetValue<string>();
+                this.PlayerCode = 2;
+
                 JoinLobbyForm.Invoke((MethodInvoker)delegate
                 {
                     this.JoinLobbyForm.Hide();
@@ -114,6 +124,23 @@ namespace Avioane
                     this.LobbyForm.Hide();
                     this.GameForm.setNames();
                     this.GameForm.Show();
+
+                    planes = JsonConvert.DeserializeObject<List<string>>(response.GetValue<string>());
+
+                    this.GameForm.loadPlanes(planes);
+
+                    if (this.PlayerCode == 1)
+                    {
+                        this.GameForm.gameState.Text = "Attack ..";
+                        this.GameForm.gameState.ForeColor = Color.Green;
+                        this.GameForm.enemyPlanes.Enabled = true;
+                    } 
+                    else
+                    {
+                        this.GameForm.gameState.Text = "Waiting ..";
+                        this.GameForm.gameState.ForeColor = Color.Red;
+                        this.GameForm.enemyPlanes.Enabled = false;
+                    }
                 });
             });
 
@@ -131,6 +158,7 @@ namespace Avioane
                         if (this.GameForm.Visible)
                         {
                             this.GameForm.Hide();
+                            this.GameForm = new Game(this);
                         }
 
                         this.ActionsFrame.Show();
@@ -142,6 +170,60 @@ namespace Avioane
                 }
             });
 
+            client.On("attacked", response =>
+            {
+                List<string> resp = JsonConvert.DeserializeObject<List<string>>(response.GetValue<string>());
+                GameForm.Invoke((MethodInvoker)delegate
+                {
+                    this.GameForm.attacked(resp[0], resp[1]);
+                });
+            });
+
+            client.On("attack-response", response =>
+            {
+                List<string> resp = JsonConvert.DeserializeObject<List<string>>(response.GetValue<string>());
+                GameForm.Invoke((MethodInvoker)delegate
+                {
+                    this.GameForm.attackResponse(resp[0], resp[1]);
+                });
+            });
+
+            client.On("winner", response =>
+            {
+                GameForm.Invoke((MethodInvoker)delegate
+                {
+                    if (this.GameForm.Visible)
+                    {
+                        this.GameForm.Hide();
+                        this.GameForm = new Game(this);
+                    }
+
+                    this.ActionsFrame.Show();
+                });
+
+                enemyLeft = false;
+                gameInProgress = false;
+                MessageBox.Show("You win", "War result");
+            });
+
+            client.On("defeated", response =>
+            {
+                GameForm.Invoke((MethodInvoker)delegate
+                {
+                    if (this.GameForm.Visible)
+                    {
+                        this.GameForm.Hide();
+                        this.GameForm = new Game(this);
+                    }
+
+                    this.ActionsFrame.Show();
+                });
+
+                enemyLeft = false;
+                gameInProgress = false;
+                MessageBox.Show("You are defeated!", "War result");
+            });
+
             client.ConnectAsync();
         }
 
@@ -150,30 +232,11 @@ namespace Avioane
             await client.EmitAsync(eventName, data);
         }
 
-        // --- InputName.cs ---
-        public void SubmitInputName(string PlayerName)
-        {
-            this.PlayerName = PlayerName;
-
-            this.InputNameForm.Hide();
-            this.ActionsFrame.Show();
-        }
-        // --- InputName.cs ---
-
-        // --- Actions.cs ---
         public void SubmitCreateGame()
         {
             SendServerMessage("create-game", this.PlayerName);
         }
 
-        public void SubmitShowJoinGame()
-        {
-            this.ActionsFrame.Hide();
-            this.JoinLobbyForm.Show();
-        }
-        // --- Actions.cs ---
-
-        // --- JoinLobby.cs --- 
         public void SubmitJoinGame(string gameCode)
         {
             this.GameCode = gameCode;
@@ -184,6 +247,15 @@ namespace Avioane
 
             SendServerMessage("join-lobby", jsonObject.ToString());
         }
-        // --- JoinLobby.cs --- 
+
+        public void SubmitAttackEnemy(string target)
+        {
+            JObject jsonObject = new JObject();
+            jsonObject["playerCode"] = this.PlayerCode;
+            jsonObject["gameCode"] = this.GameCode;
+            jsonObject["target"] = target;
+
+            SendServerMessage("attack", jsonObject.ToString());
+        }
     }
 }

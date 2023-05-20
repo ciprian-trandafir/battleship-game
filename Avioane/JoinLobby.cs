@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Avioane
@@ -30,6 +23,12 @@ namespace Avioane
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            this.main.JoinLobbyForm.Hide();
+            this.main.ActionsFrame.Show();
         }
     }
 }

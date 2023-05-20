@@ -21,7 +21,8 @@ namespace Avioane
 
         private void joinGame_Click(object sender, EventArgs e)
         {
-            main.SubmitShowJoinGame();
+            this.main.ActionsFrame.Hide();
+            this.main.JoinLobbyForm.Show();
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)

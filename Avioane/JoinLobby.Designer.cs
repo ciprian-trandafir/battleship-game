@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.gameID = new System.Windows.Forms.TextBox();
             this.submitGameID = new System.Windows.Forms.Button();
+            this.buttonBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -60,11 +61,22 @@
             this.submitGameID.UseVisualStyleBackColor = true;
             this.submitGameID.Click += new System.EventHandler(this.submitGameID_Click);
             // 
+            // buttonBack
+            // 
+            this.buttonBack.Location = new System.Drawing.Point(12, 12);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(101, 38);
+            this.buttonBack.TabIndex = 3;
+            this.buttonBack.Text = "Back";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            // 
             // JoinLobby
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(410, 474);
+            this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.submitGameID);
             this.Controls.Add(this.gameID);
             this.Controls.Add(this.label1);
@@ -80,5 +92,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox gameID;
         private System.Windows.Forms.Button submitGameID;
+        private System.Windows.Forms.Button buttonBack;
     }
 }

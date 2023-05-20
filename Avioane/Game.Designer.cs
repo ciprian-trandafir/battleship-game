@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.enemyPlanes = new System.Windows.Forms.GroupBox();
             this.label21 = new System.Windows.Forms.Label();
             this.enemy_j_2 = new System.Windows.Forms.Button();
@@ -271,6 +270,7 @@
             this.my_j_6 = new System.Windows.Forms.Button();
             this.my_i_2 = new System.Windows.Forms.Button();
             this.my_j_2 = new System.Windows.Forms.Button();
+            this.gameState = new System.Windows.Forms.Label();
             this.enemyPlanes.SuspendLayout();
             this.myPlanes.SuspendLayout();
             this.SuspendLayout();
@@ -449,7 +449,6 @@
             this.enemy_i_2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.enemy_i_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.enemy_i_2.ForeColor = System.Drawing.Color.Transparent;
-            this.enemy_i_2.Image = ((System.Drawing.Image)(resources.GetObject("enemy_i_2.Image")));
             this.enemy_i_2.Location = new System.Drawing.Point(485, 122);
             this.enemy_i_2.Margin = new System.Windows.Forms.Padding(4);
             this.enemy_i_2.Name = "enemy_i_2";
@@ -521,7 +520,6 @@
             // enemy_i_6
             // 
             this.enemy_i_6.BackColor = System.Drawing.Color.Transparent;
-            this.enemy_i_6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("enemy_i_6.BackgroundImage")));
             this.enemy_i_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.enemy_i_6.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.enemy_i_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -676,7 +674,6 @@
             this.enemy_h_2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.enemy_h_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.enemy_h_2.ForeColor = System.Drawing.Color.Transparent;
-            this.enemy_h_2.Image = ((System.Drawing.Image)(resources.GetObject("enemy_h_2.Image")));
             this.enemy_h_2.Location = new System.Drawing.Point(433, 122);
             this.enemy_h_2.Margin = new System.Windows.Forms.Padding(4);
             this.enemy_h_2.Name = "enemy_h_2";
@@ -1126,7 +1123,6 @@
             this.enemy_i_1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.enemy_i_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.enemy_i_1.ForeColor = System.Drawing.Color.Transparent;
-            this.enemy_i_1.Image = ((System.Drawing.Image)(resources.GetObject("enemy_i_1.Image")));
             this.enemy_i_1.Location = new System.Drawing.Point(485, 74);
             this.enemy_i_1.Margin = new System.Windows.Forms.Padding(4);
             this.enemy_i_1.Name = "enemy_i_1";
@@ -1305,7 +1301,6 @@
             // enemy_f_9
             // 
             this.enemy_f_9.BackColor = System.Drawing.Color.Transparent;
-            this.enemy_f_9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("enemy_f_9.BackgroundImage")));
             this.enemy_f_9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.enemy_f_9.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.enemy_f_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1408,7 +1403,6 @@
             this.enemy_h_1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.enemy_h_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.enemy_h_1.ForeColor = System.Drawing.Color.Transparent;
-            this.enemy_h_1.Image = ((System.Drawing.Image)(resources.GetObject("enemy_h_1.Image")));
             this.enemy_h_1.Location = new System.Drawing.Point(433, 74);
             this.enemy_h_1.Margin = new System.Windows.Forms.Padding(4);
             this.enemy_h_1.Name = "enemy_h_1";
@@ -1503,7 +1497,6 @@
             // enemy_f_7
             // 
             this.enemy_f_7.BackColor = System.Drawing.Color.Transparent;
-            this.enemy_f_7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("enemy_f_7.BackgroundImage")));
             this.enemy_f_7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.enemy_f_7.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.enemy_f_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1714,7 +1707,6 @@
             // enemy_d_4
             // 
             this.enemy_d_4.BackColor = System.Drawing.Color.Transparent;
-            this.enemy_d_4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("enemy_d_4.BackgroundImage")));
             this.enemy_d_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.enemy_d_4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.enemy_d_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1911,7 +1903,6 @@
             // enemy_e_9
             // 
             this.enemy_e_9.BackColor = System.Drawing.Color.Transparent;
-            this.enemy_e_9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("enemy_e_9.BackgroundImage")));
             this.enemy_e_9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.enemy_e_9.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.enemy_e_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2024,7 +2015,6 @@
             // enemy_c_4
             // 
             this.enemy_c_4.BackColor = System.Drawing.Color.Transparent;
-            this.enemy_c_4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("enemy_c_4.BackgroundImage")));
             this.enemy_c_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.enemy_c_4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.enemy_c_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -2390,6 +2380,8 @@
             // my_a_1
             // 
             this.my_a_1.BackColor = System.Drawing.Color.Transparent;
+            this.my_a_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_a_1.Enabled = false;
             this.my_a_1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_a_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_a_1.ForeColor = System.Drawing.Color.Transparent;
@@ -2403,6 +2395,8 @@
             // my_a_9
             // 
             this.my_a_9.BackColor = System.Drawing.Color.Transparent;
+            this.my_a_9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_a_9.Enabled = false;
             this.my_a_9.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_a_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_a_9.ForeColor = System.Drawing.Color.Transparent;
@@ -2416,6 +2410,8 @@
             // my_a_5
             // 
             this.my_a_5.BackColor = System.Drawing.Color.Transparent;
+            this.my_a_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_a_5.Enabled = false;
             this.my_a_5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_a_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_a_5.ForeColor = System.Drawing.Color.Transparent;
@@ -2429,6 +2425,8 @@
             // my_a_7
             // 
             this.my_a_7.BackColor = System.Drawing.Color.Transparent;
+            this.my_a_7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_a_7.Enabled = false;
             this.my_a_7.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_a_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_a_7.ForeColor = System.Drawing.Color.Transparent;
@@ -2442,6 +2440,8 @@
             // my_a_3
             // 
             this.my_a_3.BackColor = System.Drawing.Color.Transparent;
+            this.my_a_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_a_3.Enabled = false;
             this.my_a_3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_a_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_a_3.ForeColor = System.Drawing.Color.Transparent;
@@ -2455,6 +2455,8 @@
             // my_b_1
             // 
             this.my_b_1.BackColor = System.Drawing.Color.Transparent;
+            this.my_b_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_b_1.Enabled = false;
             this.my_b_1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_b_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_b_1.ForeColor = System.Drawing.Color.Transparent;
@@ -2467,7 +2469,9 @@
             // 
             // my_b_5
             // 
-            this.my_b_5.BackColor = System.Drawing.Color.Black;
+            this.my_b_5.BackColor = System.Drawing.Color.Transparent;
+            this.my_b_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_b_5.Enabled = false;
             this.my_b_5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_b_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_b_5.ForeColor = System.Drawing.Color.Transparent;
@@ -2481,6 +2485,8 @@
             // my_a_10
             // 
             this.my_a_10.BackColor = System.Drawing.Color.Transparent;
+            this.my_a_10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_a_10.Enabled = false;
             this.my_a_10.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_a_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_a_10.ForeColor = System.Drawing.Color.Transparent;
@@ -2493,7 +2499,9 @@
             // 
             // my_a_4
             // 
-            this.my_a_4.BackColor = System.Drawing.Color.Black;
+            this.my_a_4.BackColor = System.Drawing.Color.Transparent;
+            this.my_a_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_a_4.Enabled = false;
             this.my_a_4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_a_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_a_4.ForeColor = System.Drawing.Color.Transparent;
@@ -2507,6 +2515,8 @@
             // my_f_1
             // 
             this.my_f_1.BackColor = System.Drawing.Color.Transparent;
+            this.my_f_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_f_1.Enabled = false;
             this.my_f_1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_f_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_f_1.ForeColor = System.Drawing.Color.Transparent;
@@ -2520,6 +2530,8 @@
             // my_f_5
             // 
             this.my_f_5.BackColor = System.Drawing.Color.Transparent;
+            this.my_f_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_f_5.Enabled = false;
             this.my_f_5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_f_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_f_5.ForeColor = System.Drawing.Color.Transparent;
@@ -2532,7 +2544,9 @@
             // 
             // my_a_6
             // 
-            this.my_a_6.BackColor = System.Drawing.Color.Black;
+            this.my_a_6.BackColor = System.Drawing.Color.Transparent;
+            this.my_a_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_a_6.Enabled = false;
             this.my_a_6.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_a_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_a_6.ForeColor = System.Drawing.Color.Transparent;
@@ -2546,6 +2560,8 @@
             // my_b_9
             // 
             this.my_b_9.BackColor = System.Drawing.Color.Transparent;
+            this.my_b_9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_b_9.Enabled = false;
             this.my_b_9.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_b_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_b_9.ForeColor = System.Drawing.Color.Transparent;
@@ -2559,6 +2575,8 @@
             // my_b_7
             // 
             this.my_b_7.BackColor = System.Drawing.Color.Transparent;
+            this.my_b_7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_b_7.Enabled = false;
             this.my_b_7.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_b_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_b_7.ForeColor = System.Drawing.Color.Transparent;
@@ -2572,6 +2590,8 @@
             // my_a_8
             // 
             this.my_a_8.BackColor = System.Drawing.Color.Transparent;
+            this.my_a_8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_a_8.Enabled = false;
             this.my_a_8.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_a_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_a_8.ForeColor = System.Drawing.Color.Transparent;
@@ -2585,6 +2605,8 @@
             // my_f_9
             // 
             this.my_f_9.BackColor = System.Drawing.Color.Transparent;
+            this.my_f_9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_f_9.Enabled = false;
             this.my_f_9.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_f_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_f_9.ForeColor = System.Drawing.Color.Transparent;
@@ -2597,7 +2619,9 @@
             // 
             // my_b_3
             // 
-            this.my_b_3.BackColor = System.Drawing.Color.Black;
+            this.my_b_3.BackColor = System.Drawing.Color.Transparent;
+            this.my_b_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_b_3.Enabled = false;
             this.my_b_3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_b_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_b_3.ForeColor = System.Drawing.Color.Transparent;
@@ -2611,6 +2635,8 @@
             // my_a_2
             // 
             this.my_a_2.BackColor = System.Drawing.Color.Transparent;
+            this.my_a_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_a_2.Enabled = false;
             this.my_a_2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_a_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_a_2.ForeColor = System.Drawing.Color.Transparent;
@@ -2624,6 +2650,8 @@
             // my_b_10
             // 
             this.my_b_10.BackColor = System.Drawing.Color.Transparent;
+            this.my_b_10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_b_10.Enabled = false;
             this.my_b_10.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_b_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_b_10.ForeColor = System.Drawing.Color.Transparent;
@@ -2637,6 +2665,8 @@
             // my_b_8
             // 
             this.my_b_8.BackColor = System.Drawing.Color.Transparent;
+            this.my_b_8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_b_8.Enabled = false;
             this.my_b_8.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_b_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_b_8.ForeColor = System.Drawing.Color.Transparent;
@@ -2649,7 +2679,9 @@
             // 
             // my_b_4
             // 
-            this.my_b_4.BackColor = System.Drawing.Color.Black;
+            this.my_b_4.BackColor = System.Drawing.Color.Transparent;
+            this.my_b_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_b_4.Enabled = false;
             this.my_b_4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_b_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_b_4.ForeColor = System.Drawing.Color.Transparent;
@@ -2663,6 +2695,8 @@
             // my_f_7
             // 
             this.my_f_7.BackColor = System.Drawing.Color.Transparent;
+            this.my_f_7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_f_7.Enabled = false;
             this.my_f_7.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_f_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_f_7.ForeColor = System.Drawing.Color.Transparent;
@@ -2676,6 +2710,8 @@
             // my_f_3
             // 
             this.my_f_3.BackColor = System.Drawing.Color.Transparent;
+            this.my_f_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_f_3.Enabled = false;
             this.my_f_3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_f_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_f_3.ForeColor = System.Drawing.Color.Transparent;
@@ -2689,6 +2725,8 @@
             // my_c_1
             // 
             this.my_c_1.BackColor = System.Drawing.Color.Transparent;
+            this.my_c_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_c_1.Enabled = false;
             this.my_c_1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_c_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_c_1.ForeColor = System.Drawing.Color.Transparent;
@@ -2702,6 +2740,8 @@
             // my_c_9
             // 
             this.my_c_9.BackColor = System.Drawing.Color.Transparent;
+            this.my_c_9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_c_9.Enabled = false;
             this.my_c_9.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_c_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_c_9.ForeColor = System.Drawing.Color.Transparent;
@@ -2715,6 +2755,8 @@
             // my_c_5
             // 
             this.my_c_5.BackColor = System.Drawing.Color.Transparent;
+            this.my_c_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_c_5.Enabled = false;
             this.my_c_5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_c_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_c_5.ForeColor = System.Drawing.Color.Transparent;
@@ -2727,7 +2769,9 @@
             // 
             // my_b_6
             // 
-            this.my_b_6.BackColor = System.Drawing.Color.Black;
+            this.my_b_6.BackColor = System.Drawing.Color.Transparent;
+            this.my_b_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_b_6.Enabled = false;
             this.my_b_6.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_b_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_b_6.ForeColor = System.Drawing.Color.Transparent;
@@ -2741,6 +2785,8 @@
             // my_b_2
             // 
             this.my_b_2.BackColor = System.Drawing.Color.Transparent;
+            this.my_b_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_b_2.Enabled = false;
             this.my_b_2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_b_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_b_2.ForeColor = System.Drawing.Color.Transparent;
@@ -2754,6 +2800,8 @@
             // my_f_10
             // 
             this.my_f_10.BackColor = System.Drawing.Color.Transparent;
+            this.my_f_10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_f_10.Enabled = false;
             this.my_f_10.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_f_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_f_10.ForeColor = System.Drawing.Color.Transparent;
@@ -2766,7 +2814,9 @@
             // 
             // my_f_8
             // 
-            this.my_f_8.BackColor = System.Drawing.Color.Black;
+            this.my_f_8.BackColor = System.Drawing.Color.Transparent;
+            this.my_f_8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_f_8.Enabled = false;
             this.my_f_8.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_f_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_f_8.ForeColor = System.Drawing.Color.Transparent;
@@ -2780,6 +2830,8 @@
             // my_f_4
             // 
             this.my_f_4.BackColor = System.Drawing.Color.Transparent;
+            this.my_f_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_f_4.Enabled = false;
             this.my_f_4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_f_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_f_4.ForeColor = System.Drawing.Color.Transparent;
@@ -2793,6 +2845,8 @@
             // my_c_7
             // 
             this.my_c_7.BackColor = System.Drawing.Color.Transparent;
+            this.my_c_7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_c_7.Enabled = false;
             this.my_c_7.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_c_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_c_7.ForeColor = System.Drawing.Color.Transparent;
@@ -2806,6 +2860,8 @@
             // my_c_3
             // 
             this.my_c_3.BackColor = System.Drawing.Color.Transparent;
+            this.my_c_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_c_3.Enabled = false;
             this.my_c_3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_c_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_c_3.ForeColor = System.Drawing.Color.Transparent;
@@ -2819,6 +2875,8 @@
             // my_d_1
             // 
             this.my_d_1.BackColor = System.Drawing.Color.Transparent;
+            this.my_d_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_d_1.Enabled = false;
             this.my_d_1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_d_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_d_1.ForeColor = System.Drawing.Color.Transparent;
@@ -2832,6 +2890,8 @@
             // my_d_9
             // 
             this.my_d_9.BackColor = System.Drawing.Color.Transparent;
+            this.my_d_9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_d_9.Enabled = false;
             this.my_d_9.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_d_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_d_9.ForeColor = System.Drawing.Color.Transparent;
@@ -2845,6 +2905,8 @@
             // my_d_5
             // 
             this.my_d_5.BackColor = System.Drawing.Color.Transparent;
+            this.my_d_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_d_5.Enabled = false;
             this.my_d_5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_d_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_d_5.ForeColor = System.Drawing.Color.Transparent;
@@ -2858,6 +2920,8 @@
             // my_f_6
             // 
             this.my_f_6.BackColor = System.Drawing.Color.Transparent;
+            this.my_f_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_f_6.Enabled = false;
             this.my_f_6.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_f_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_f_6.ForeColor = System.Drawing.Color.Transparent;
@@ -2871,6 +2935,8 @@
             // my_f_2
             // 
             this.my_f_2.BackColor = System.Drawing.Color.Transparent;
+            this.my_f_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_f_2.Enabled = false;
             this.my_f_2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_f_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_f_2.ForeColor = System.Drawing.Color.Transparent;
@@ -2884,6 +2950,8 @@
             // my_c_10
             // 
             this.my_c_10.BackColor = System.Drawing.Color.Transparent;
+            this.my_c_10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_c_10.Enabled = false;
             this.my_c_10.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_c_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_c_10.ForeColor = System.Drawing.Color.Transparent;
@@ -2897,6 +2965,8 @@
             // my_c_8
             // 
             this.my_c_8.BackColor = System.Drawing.Color.Transparent;
+            this.my_c_8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_c_8.Enabled = false;
             this.my_c_8.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_c_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_c_8.ForeColor = System.Drawing.Color.Transparent;
@@ -2909,9 +2979,10 @@
             // 
             // my_c_4
             // 
-            this.my_c_4.BackColor = System.Drawing.Color.Black;
-            this.my_c_4.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.my_c_4.FlatAppearance.BorderSize = 5;
+            this.my_c_4.BackColor = System.Drawing.Color.Transparent;
+            this.my_c_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_c_4.Enabled = false;
+            this.my_c_4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_c_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_c_4.ForeColor = System.Drawing.Color.Transparent;
             this.my_c_4.Location = new System.Drawing.Point(175, 218);
@@ -2924,6 +2995,8 @@
             // my_d_7
             // 
             this.my_d_7.BackColor = System.Drawing.Color.Transparent;
+            this.my_d_7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_d_7.Enabled = false;
             this.my_d_7.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_d_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_d_7.ForeColor = System.Drawing.Color.Transparent;
@@ -2937,6 +3010,8 @@
             // my_d_3
             // 
             this.my_d_3.BackColor = System.Drawing.Color.Transparent;
+            this.my_d_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_d_3.Enabled = false;
             this.my_d_3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_d_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_d_3.ForeColor = System.Drawing.Color.Transparent;
@@ -2950,6 +3025,8 @@
             // my_e_1
             // 
             this.my_e_1.BackColor = System.Drawing.Color.Transparent;
+            this.my_e_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_e_1.Enabled = false;
             this.my_e_1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_e_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_e_1.ForeColor = System.Drawing.Color.Transparent;
@@ -2962,9 +3039,10 @@
             // 
             // my_e_9
             // 
-            this.my_e_9.BackColor = System.Drawing.Color.Black;
-            this.my_e_9.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.my_e_9.FlatAppearance.BorderSize = 5;
+            this.my_e_9.BackColor = System.Drawing.Color.Transparent;
+            this.my_e_9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_e_9.Enabled = false;
+            this.my_e_9.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_e_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_e_9.ForeColor = System.Drawing.Color.Transparent;
             this.my_e_9.Location = new System.Drawing.Point(279, 458);
@@ -2977,6 +3055,8 @@
             // my_e_5
             // 
             this.my_e_5.BackColor = System.Drawing.Color.Transparent;
+            this.my_e_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_e_5.Enabled = false;
             this.my_e_5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_e_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_e_5.ForeColor = System.Drawing.Color.Transparent;
@@ -2989,7 +3069,9 @@
             // 
             // my_c_6
             // 
-            this.my_c_6.BackColor = System.Drawing.Color.Black;
+            this.my_c_6.BackColor = System.Drawing.Color.Transparent;
+            this.my_c_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_c_6.Enabled = false;
             this.my_c_6.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_c_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_c_6.ForeColor = System.Drawing.Color.Transparent;
@@ -3003,6 +3085,8 @@
             // my_d_10
             // 
             this.my_d_10.BackColor = System.Drawing.Color.Transparent;
+            this.my_d_10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_d_10.Enabled = false;
             this.my_d_10.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_d_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_d_10.ForeColor = System.Drawing.Color.Transparent;
@@ -3016,6 +3100,8 @@
             // my_d_8
             // 
             this.my_d_8.BackColor = System.Drawing.Color.Transparent;
+            this.my_d_8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_d_8.Enabled = false;
             this.my_d_8.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_d_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_d_8.ForeColor = System.Drawing.Color.Transparent;
@@ -3029,6 +3115,8 @@
             // my_c_2
             // 
             this.my_c_2.BackColor = System.Drawing.Color.Transparent;
+            this.my_c_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_c_2.Enabled = false;
             this.my_c_2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_c_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_c_2.ForeColor = System.Drawing.Color.Transparent;
@@ -3041,7 +3129,9 @@
             // 
             // my_e_7
             // 
-            this.my_e_7.BackColor = System.Drawing.Color.Black;
+            this.my_e_7.BackColor = System.Drawing.Color.Transparent;
+            this.my_e_7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_e_7.Enabled = false;
             this.my_e_7.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_e_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_e_7.ForeColor = System.Drawing.Color.Transparent;
@@ -3055,6 +3145,8 @@
             // my_d_4
             // 
             this.my_d_4.BackColor = System.Drawing.Color.Transparent;
+            this.my_d_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_d_4.Enabled = false;
             this.my_d_4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_d_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_d_4.ForeColor = System.Drawing.Color.Transparent;
@@ -3068,6 +3160,8 @@
             // my_g_1
             // 
             this.my_g_1.BackColor = System.Drawing.Color.Transparent;
+            this.my_g_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_g_1.Enabled = false;
             this.my_g_1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_g_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_g_1.ForeColor = System.Drawing.Color.Transparent;
@@ -3080,7 +3174,9 @@
             // 
             // my_g_9
             // 
-            this.my_g_9.BackColor = System.Drawing.Color.Black;
+            this.my_g_9.BackColor = System.Drawing.Color.Transparent;
+            this.my_g_9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_g_9.Enabled = false;
             this.my_g_9.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_g_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_g_9.ForeColor = System.Drawing.Color.Transparent;
@@ -3094,6 +3190,8 @@
             // my_e_3
             // 
             this.my_e_3.BackColor = System.Drawing.Color.Transparent;
+            this.my_e_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_e_3.Enabled = false;
             this.my_e_3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_e_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_e_3.ForeColor = System.Drawing.Color.Transparent;
@@ -3107,6 +3205,8 @@
             // my_d_6
             // 
             this.my_d_6.BackColor = System.Drawing.Color.Transparent;
+            this.my_d_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_d_6.Enabled = false;
             this.my_d_6.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_d_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_d_6.ForeColor = System.Drawing.Color.Transparent;
@@ -3120,6 +3220,8 @@
             // my_g_5
             // 
             this.my_g_5.BackColor = System.Drawing.Color.Transparent;
+            this.my_g_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_g_5.Enabled = false;
             this.my_g_5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_g_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_g_5.ForeColor = System.Drawing.Color.Transparent;
@@ -3133,6 +3235,8 @@
             // my_e_10
             // 
             this.my_e_10.BackColor = System.Drawing.Color.Transparent;
+            this.my_e_10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_e_10.Enabled = false;
             this.my_e_10.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_e_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_e_10.ForeColor = System.Drawing.Color.Transparent;
@@ -3145,7 +3249,9 @@
             // 
             // my_e_8
             // 
-            this.my_e_8.BackColor = System.Drawing.Color.Black;
+            this.my_e_8.BackColor = System.Drawing.Color.Transparent;
+            this.my_e_8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_e_8.Enabled = false;
             this.my_e_8.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_e_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_e_8.ForeColor = System.Drawing.Color.Transparent;
@@ -3159,6 +3265,8 @@
             // my_d_2
             // 
             this.my_d_2.BackColor = System.Drawing.Color.Transparent;
+            this.my_d_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_d_2.Enabled = false;
             this.my_d_2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_d_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_d_2.ForeColor = System.Drawing.Color.Transparent;
@@ -3171,7 +3279,9 @@
             // 
             // my_g_7
             // 
-            this.my_g_7.BackColor = System.Drawing.Color.Black;
+            this.my_g_7.BackColor = System.Drawing.Color.Transparent;
+            this.my_g_7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_g_7.Enabled = false;
             this.my_g_7.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_g_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_g_7.ForeColor = System.Drawing.Color.Transparent;
@@ -3185,6 +3295,8 @@
             // my_e_4
             // 
             this.my_e_4.BackColor = System.Drawing.Color.Transparent;
+            this.my_e_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_e_4.Enabled = false;
             this.my_e_4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_e_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_e_4.ForeColor = System.Drawing.Color.Transparent;
@@ -3197,9 +3309,10 @@
             // 
             // my_h_1
             // 
-            this.my_h_1.BackColor = System.Drawing.Color.Black;
-            this.my_h_1.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.my_h_1.FlatAppearance.BorderSize = 5;
+            this.my_h_1.BackColor = System.Drawing.Color.Transparent;
+            this.my_h_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_h_1.Enabled = false;
+            this.my_h_1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_h_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_h_1.ForeColor = System.Drawing.Color.Transparent;
             this.my_h_1.Location = new System.Drawing.Point(435, 74);
@@ -3213,6 +3326,8 @@
             // my_h_9
             // 
             this.my_h_9.BackColor = System.Drawing.Color.Transparent;
+            this.my_h_9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_h_9.Enabled = false;
             this.my_h_9.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_h_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_h_9.ForeColor = System.Drawing.Color.Transparent;
@@ -3226,6 +3341,8 @@
             // my_g_3
             // 
             this.my_g_3.BackColor = System.Drawing.Color.Transparent;
+            this.my_g_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_g_3.Enabled = false;
             this.my_g_3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_g_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_g_3.ForeColor = System.Drawing.Color.Transparent;
@@ -3239,6 +3356,8 @@
             // my_e_6
             // 
             this.my_e_6.BackColor = System.Drawing.Color.Transparent;
+            this.my_e_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_e_6.Enabled = false;
             this.my_e_6.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_e_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_e_6.ForeColor = System.Drawing.Color.Transparent;
@@ -3252,6 +3371,8 @@
             // my_h_4
             // 
             this.my_h_4.BackColor = System.Drawing.Color.Transparent;
+            this.my_h_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_h_4.Enabled = false;
             this.my_h_4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_h_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_h_4.ForeColor = System.Drawing.Color.Transparent;
@@ -3265,6 +3386,8 @@
             // my_g_10
             // 
             this.my_g_10.BackColor = System.Drawing.Color.Transparent;
+            this.my_g_10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_g_10.Enabled = false;
             this.my_g_10.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_g_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_g_10.ForeColor = System.Drawing.Color.Transparent;
@@ -3277,7 +3400,9 @@
             // 
             // my_g_8
             // 
-            this.my_g_8.BackColor = System.Drawing.Color.Black;
+            this.my_g_8.BackColor = System.Drawing.Color.Transparent;
+            this.my_g_8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_g_8.Enabled = false;
             this.my_g_8.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_g_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_g_8.ForeColor = System.Drawing.Color.Transparent;
@@ -3291,6 +3416,8 @@
             // my_e_2
             // 
             this.my_e_2.BackColor = System.Drawing.Color.Transparent;
+            this.my_e_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_e_2.Enabled = false;
             this.my_e_2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_e_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_e_2.ForeColor = System.Drawing.Color.Transparent;
@@ -3304,6 +3431,8 @@
             // my_h_7
             // 
             this.my_h_7.BackColor = System.Drawing.Color.Transparent;
+            this.my_h_7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_h_7.Enabled = false;
             this.my_h_7.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_h_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_h_7.ForeColor = System.Drawing.Color.Transparent;
@@ -3317,6 +3446,8 @@
             // my_g_4
             // 
             this.my_g_4.BackColor = System.Drawing.Color.Transparent;
+            this.my_g_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_g_4.Enabled = false;
             this.my_g_4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_g_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_g_4.ForeColor = System.Drawing.Color.Transparent;
@@ -3330,6 +3461,8 @@
             // my_i_1
             // 
             this.my_i_1.BackColor = System.Drawing.Color.Transparent;
+            this.my_i_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_i_1.Enabled = false;
             this.my_i_1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_i_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_i_1.ForeColor = System.Drawing.Color.Transparent;
@@ -3343,6 +3476,8 @@
             // my_i_9
             // 
             this.my_i_9.BackColor = System.Drawing.Color.Transparent;
+            this.my_i_9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_i_9.Enabled = false;
             this.my_i_9.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_i_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_i_9.ForeColor = System.Drawing.Color.Transparent;
@@ -3355,7 +3490,9 @@
             // 
             // my_h_3
             // 
-            this.my_h_3.BackColor = System.Drawing.Color.Black;
+            this.my_h_3.BackColor = System.Drawing.Color.Transparent;
+            this.my_h_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_h_3.Enabled = false;
             this.my_h_3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_h_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_h_3.ForeColor = System.Drawing.Color.Transparent;
@@ -3369,6 +3506,8 @@
             // my_g_6
             // 
             this.my_g_6.BackColor = System.Drawing.Color.Transparent;
+            this.my_g_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_g_6.Enabled = false;
             this.my_g_6.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_g_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_g_6.ForeColor = System.Drawing.Color.Transparent;
@@ -3382,6 +3521,8 @@
             // my_i_5
             // 
             this.my_i_5.BackColor = System.Drawing.Color.Transparent;
+            this.my_i_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_i_5.Enabled = false;
             this.my_i_5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_i_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_i_5.ForeColor = System.Drawing.Color.Transparent;
@@ -3395,6 +3536,8 @@
             // my_h_10
             // 
             this.my_h_10.BackColor = System.Drawing.Color.Transparent;
+            this.my_h_10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_h_10.Enabled = false;
             this.my_h_10.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_h_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_h_10.ForeColor = System.Drawing.Color.Transparent;
@@ -3407,7 +3550,9 @@
             // 
             // my_h_8
             // 
-            this.my_h_8.BackColor = System.Drawing.Color.Black;
+            this.my_h_8.BackColor = System.Drawing.Color.Transparent;
+            this.my_h_8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_h_8.Enabled = false;
             this.my_h_8.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_h_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_h_8.ForeColor = System.Drawing.Color.Transparent;
@@ -3420,7 +3565,9 @@
             // 
             // my_g_2
             // 
-            this.my_g_2.BackColor = System.Drawing.Color.Black;
+            this.my_g_2.BackColor = System.Drawing.Color.Transparent;
+            this.my_g_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_g_2.Enabled = false;
             this.my_g_2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_g_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_g_2.ForeColor = System.Drawing.Color.Transparent;
@@ -3434,6 +3581,8 @@
             // my_i_7
             // 
             this.my_i_7.BackColor = System.Drawing.Color.Transparent;
+            this.my_i_7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_i_7.Enabled = false;
             this.my_i_7.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_i_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_i_7.ForeColor = System.Drawing.Color.Transparent;
@@ -3447,6 +3596,8 @@
             // my_h_5
             // 
             this.my_h_5.BackColor = System.Drawing.Color.Transparent;
+            this.my_h_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_h_5.Enabled = false;
             this.my_h_5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_h_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_h_5.ForeColor = System.Drawing.Color.Transparent;
@@ -3459,7 +3610,9 @@
             // 
             // my_j_1
             // 
-            this.my_j_1.BackColor = System.Drawing.Color.Black;
+            this.my_j_1.BackColor = System.Drawing.Color.Transparent;
+            this.my_j_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_j_1.Enabled = false;
             this.my_j_1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_j_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_j_1.ForeColor = System.Drawing.Color.Transparent;
@@ -3473,6 +3626,8 @@
             // my_j_9
             // 
             this.my_j_9.BackColor = System.Drawing.Color.Transparent;
+            this.my_j_9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_j_9.Enabled = false;
             this.my_j_9.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_j_9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_j_9.ForeColor = System.Drawing.Color.Transparent;
@@ -3486,6 +3641,8 @@
             // my_i_3
             // 
             this.my_i_3.BackColor = System.Drawing.Color.Transparent;
+            this.my_i_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_i_3.Enabled = false;
             this.my_i_3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_i_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_i_3.ForeColor = System.Drawing.Color.Transparent;
@@ -3499,6 +3656,8 @@
             // my_h_6
             // 
             this.my_h_6.BackColor = System.Drawing.Color.Transparent;
+            this.my_h_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_h_6.Enabled = false;
             this.my_h_6.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_h_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_h_6.ForeColor = System.Drawing.Color.Transparent;
@@ -3512,6 +3671,8 @@
             // my_i_10
             // 
             this.my_i_10.BackColor = System.Drawing.Color.Transparent;
+            this.my_i_10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_i_10.Enabled = false;
             this.my_i_10.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_i_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_i_10.ForeColor = System.Drawing.Color.Transparent;
@@ -3525,6 +3686,8 @@
             // my_j_5
             // 
             this.my_j_5.BackColor = System.Drawing.Color.Transparent;
+            this.my_j_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_j_5.Enabled = false;
             this.my_j_5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_j_5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_j_5.ForeColor = System.Drawing.Color.Transparent;
@@ -3538,6 +3701,8 @@
             // my_i_8
             // 
             this.my_i_8.BackColor = System.Drawing.Color.Transparent;
+            this.my_i_8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_i_8.Enabled = false;
             this.my_i_8.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_i_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_i_8.ForeColor = System.Drawing.Color.Transparent;
@@ -3550,9 +3715,10 @@
             // 
             // my_h_2
             // 
-            this.my_h_2.BackColor = System.Drawing.Color.Black;
-            this.my_h_2.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.my_h_2.FlatAppearance.BorderSize = 5;
+            this.my_h_2.BackColor = System.Drawing.Color.Transparent;
+            this.my_h_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_h_2.Enabled = false;
+            this.my_h_2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_h_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_h_2.ForeColor = System.Drawing.Color.Transparent;
             this.my_h_2.Location = new System.Drawing.Point(435, 122);
@@ -3565,6 +3731,8 @@
             // my_j_7
             // 
             this.my_j_7.BackColor = System.Drawing.Color.Transparent;
+            this.my_j_7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_j_7.Enabled = false;
             this.my_j_7.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_j_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_j_7.ForeColor = System.Drawing.Color.Transparent;
@@ -3578,6 +3746,8 @@
             // my_j_10
             // 
             this.my_j_10.BackColor = System.Drawing.Color.Transparent;
+            this.my_j_10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_j_10.Enabled = false;
             this.my_j_10.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_j_10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_j_10.ForeColor = System.Drawing.Color.Transparent;
@@ -3591,6 +3761,8 @@
             // my_i_4
             // 
             this.my_i_4.BackColor = System.Drawing.Color.Transparent;
+            this.my_i_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_i_4.Enabled = false;
             this.my_i_4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_i_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_i_4.ForeColor = System.Drawing.Color.Transparent;
@@ -3604,6 +3776,8 @@
             // my_j_8
             // 
             this.my_j_8.BackColor = System.Drawing.Color.Transparent;
+            this.my_j_8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_j_8.Enabled = false;
             this.my_j_8.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_j_8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_j_8.ForeColor = System.Drawing.Color.Transparent;
@@ -3616,7 +3790,9 @@
             // 
             // my_j_3
             // 
-            this.my_j_3.BackColor = System.Drawing.Color.Black;
+            this.my_j_3.BackColor = System.Drawing.Color.Transparent;
+            this.my_j_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_j_3.Enabled = false;
             this.my_j_3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_j_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_j_3.ForeColor = System.Drawing.Color.Transparent;
@@ -3630,6 +3806,8 @@
             // my_i_6
             // 
             this.my_i_6.BackColor = System.Drawing.Color.Transparent;
+            this.my_i_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_i_6.Enabled = false;
             this.my_i_6.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_i_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_i_6.ForeColor = System.Drawing.Color.Transparent;
@@ -3643,6 +3821,8 @@
             // my_j_4
             // 
             this.my_j_4.BackColor = System.Drawing.Color.Transparent;
+            this.my_j_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_j_4.Enabled = false;
             this.my_j_4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_j_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_j_4.ForeColor = System.Drawing.Color.Transparent;
@@ -3656,6 +3836,8 @@
             // my_j_6
             // 
             this.my_j_6.BackColor = System.Drawing.Color.Transparent;
+            this.my_j_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_j_6.Enabled = false;
             this.my_j_6.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_j_6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_j_6.ForeColor = System.Drawing.Color.Transparent;
@@ -3668,9 +3850,10 @@
             // 
             // my_i_2
             // 
-            this.my_i_2.BackColor = System.Drawing.Color.Black;
-            this.my_i_2.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.my_i_2.FlatAppearance.BorderSize = 5;
+            this.my_i_2.BackColor = System.Drawing.Color.Transparent;
+            this.my_i_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_i_2.Enabled = false;
+            this.my_i_2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_i_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_i_2.ForeColor = System.Drawing.Color.Transparent;
             this.my_i_2.Location = new System.Drawing.Point(487, 122);
@@ -3682,7 +3865,9 @@
             // 
             // my_j_2
             // 
-            this.my_j_2.BackColor = System.Drawing.Color.Black;
+            this.my_j_2.BackColor = System.Drawing.Color.Transparent;
+            this.my_j_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.my_j_2.Enabled = false;
             this.my_j_2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.my_j_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.my_j_2.ForeColor = System.Drawing.Color.Transparent;
@@ -3693,11 +3878,22 @@
             this.my_j_2.TabIndex = 159;
             this.my_j_2.UseVisualStyleBackColor = false;
             // 
+            // gameState
+            // 
+            this.gameState.AutoSize = true;
+            this.gameState.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gameState.Location = new System.Drawing.Point(763, 616);
+            this.gameState.Name = "gameState";
+            this.gameState.Size = new System.Drawing.Size(128, 38);
+            this.gameState.TabIndex = 132;
+            this.gameState.Text = "label41";
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1410, 665);
+            this.Controls.Add(this.gameState);
             this.Controls.Add(this.enemyPlanes);
             this.Controls.Add(this.myPlanes);
             this.Name = "Game";
@@ -3707,11 +3903,12 @@
             this.myPlanes.ResumeLayout(false);
             this.myPlanes.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox enemyPlanes;
+        public System.Windows.Forms.GroupBox enemyPlanes;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button enemy_j_2;
         private System.Windows.Forms.Label label22;
@@ -3953,6 +4150,7 @@
         private System.Windows.Forms.Button my_j_6;
         private System.Windows.Forms.Button my_i_2;
         private System.Windows.Forms.Button my_j_2;
+        public System.Windows.Forms.Label gameState;
     }
 }
 

@@ -23,7 +23,11 @@ namespace Avioane
                 return;
             }
 
-            main.SubmitInputName(playerName);
+            this.main.PlayerName = playerName;
+            this.main.ActionsFrame.playerName.Text = "Hi, " + playerName;
+
+            this.main.InputNameForm.Hide();
+            this.main.ActionsFrame.Show();
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
