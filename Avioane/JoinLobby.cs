@@ -12,6 +12,8 @@ namespace Avioane
             this.main = main;
             StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
+
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void submitGameID_Click(object sender, EventArgs e)

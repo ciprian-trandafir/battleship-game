@@ -11,6 +11,8 @@ namespace Avioane
             this.main = main;
             StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
+
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         public void setLobbyId()

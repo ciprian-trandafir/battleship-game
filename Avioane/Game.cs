@@ -18,6 +18,8 @@ namespace Avioane
             StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
 
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
             this.resources = new ComponentResourceManager(typeof(Game));
 
             foreach (Control control in this.enemyPlanes.Controls)
