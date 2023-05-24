@@ -44,10 +44,26 @@ namespace Avioane
 
         public void loadPlanes(dynamic planes)
         {
-            foreach (string plane in planes)
+            /*foreach (string plane in planes)
             {
                 Button button = this.Controls.Find("my_" + plane, true).FirstOrDefault() as Button;
                 button.BackColor = Color.Black;
+            }*/
+            int count = planes.Count;
+            int startIndex = Math.Max(0, count - 6); // Determine the starting index for the last six iterations
+
+            for (int i = 0; i < count; i++)
+            {
+                Button button = this.Controls.Find("my_" + planes[i], true).FirstOrDefault() as Button;
+
+                if (i >= startIndex)
+                {
+                    button.BackColor = Color.Gray; // Set the color to gray for the last six iterations
+                }
+                else
+                {
+                    button.BackColor = Color.Black; // Set the color to black for other iterations
+                }
             }
         }
 
