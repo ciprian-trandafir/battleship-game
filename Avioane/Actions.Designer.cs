@@ -31,13 +31,14 @@
             this.createGame = new System.Windows.Forms.Button();
             this.joinGame = new System.Windows.Forms.Button();
             this.playerName = new System.Windows.Forms.Label();
+            this.gameLevel = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // createGame
             // 
-            this.createGame.Location = new System.Drawing.Point(92, 87);
+            this.createGame.Location = new System.Drawing.Point(12, 159);
             this.createGame.Name = "createGame";
-            this.createGame.Size = new System.Drawing.Size(314, 86);
+            this.createGame.Size = new System.Drawing.Size(473, 82);
             this.createGame.TabIndex = 0;
             this.createGame.Text = "Create Game";
             this.createGame.UseVisualStyleBackColor = true;
@@ -45,9 +46,9 @@
             // 
             // joinGame
             // 
-            this.joinGame.Location = new System.Drawing.Point(92, 237);
+            this.joinGame.Location = new System.Drawing.Point(12, 377);
             this.joinGame.Name = "joinGame";
-            this.joinGame.Size = new System.Drawing.Size(314, 86);
+            this.joinGame.Size = new System.Drawing.Size(473, 69);
             this.joinGame.TabIndex = 1;
             this.joinGame.Text = "Join Game";
             this.joinGame.UseVisualStyleBackColor = true;
@@ -59,15 +60,24 @@
             this.playerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playerName.Location = new System.Drawing.Point(89, 30);
             this.playerName.Name = "playerName";
-            this.playerName.Size = new System.Drawing.Size(136, 49);
+            this.playerName.Size = new System.Drawing.Size(103, 38);
             this.playerName.TabIndex = 2;
             this.playerName.Text = "label1";
+            // 
+            // gameLevel
+            // 
+            this.gameLevel.FormattingEnabled = true;
+            this.gameLevel.Location = new System.Drawing.Point(57, 114);
+            this.gameLevel.Name = "gameLevel";
+            this.gameLevel.Size = new System.Drawing.Size(400, 24);
+            this.gameLevel.TabIndex = 3;
             // 
             // Actions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(511, 402);
+            this.ClientSize = new System.Drawing.Size(497, 463);
+            this.Controls.Add(this.gameLevel);
             this.Controls.Add(this.playerName);
             this.Controls.Add(this.joinGame);
             this.Controls.Add(this.createGame);
@@ -81,6 +91,7 @@
         private System.Windows.Forms.Button createGame;
         private System.Windows.Forms.Button joinGame;
         public System.Windows.Forms.Label playerName;
+        private System.Windows.Forms.ComboBox gameLevel;
     }
     #endregion
 }

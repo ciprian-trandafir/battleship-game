@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Reflection.Emit;
 using System.Windows.Forms;
 
 namespace Avioane
@@ -232,9 +233,13 @@ namespace Avioane
             await client.EmitAsync(eventName, data);
         }
 
-        public void SubmitCreateGame()
-        {
-            SendServerMessage("create-game", this.PlayerName);
+        public void SubmitCreateGame(string level)
+        { 
+            JObject jsonObject = new JObject();
+            jsonObject["playerName"] = this.PlayerName;
+            jsonObject["level"] = level;
+
+            SendServerMessage("create-game", jsonObject.ToString());
         }
 
         public void SubmitJoinGame(string gameCode)
@@ -256,6 +261,16 @@ namespace Avioane
             jsonObject["target"] = target;
 
             SendServerMessage("attack", jsonObject.ToString());
+        }
+
+        public void SubmitAttackBomb(string target)
+        {
+            JObject jsonObject = new JObject();
+            jsonObject["playerCode"] = this.PlayerCode;
+            jsonObject["gameCode"] = this.GameCode;
+            jsonObject["bombName"] = target;
+
+            SendServerMessage("attackBomb", jsonObject.ToString());
         }
     }
 }

@@ -271,6 +271,9 @@
             this.my_i_2 = new System.Windows.Forms.Button();
             this.my_j_2 = new System.Windows.Forms.Button();
             this.gameState = new System.Windows.Forms.Label();
+            this.bomb1 = new System.Windows.Forms.Button();
+            this.bomb2 = new System.Windows.Forms.Button();
+            this.bomb3 = new System.Windows.Forms.Button();
             this.enemyPlanes.SuspendLayout();
             this.myPlanes.SuspendLayout();
             this.SuspendLayout();
@@ -3888,11 +3891,41 @@
             this.gameState.TabIndex = 132;
             this.gameState.Text = "label41";
             // 
+            // bomb1
+            // 
+            this.bomb1.Location = new System.Drawing.Point(682, 141);
+            this.bomb1.Name = "bomb1";
+            this.bomb1.Size = new System.Drawing.Size(59, 80);
+            this.bomb1.TabIndex = 133;
+            this.bomb1.Text = "B1";
+            this.bomb1.UseVisualStyleBackColor = true;
+            // 
+            // bomb2
+            // 
+            this.bomb2.Location = new System.Drawing.Point(682, 270);
+            this.bomb2.Name = "bomb2";
+            this.bomb2.Size = new System.Drawing.Size(59, 80);
+            this.bomb2.TabIndex = 134;
+            this.bomb2.Text = "B2";
+            this.bomb2.UseVisualStyleBackColor = true;
+            // 
+            // bomb3
+            // 
+            this.bomb3.Location = new System.Drawing.Point(682, 414);
+            this.bomb3.Name = "bomb3";
+            this.bomb3.Size = new System.Drawing.Size(59, 80);
+            this.bomb3.TabIndex = 135;
+            this.bomb3.Text = "B3";
+            this.bomb3.UseVisualStyleBackColor = true;
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1410, 665);
+            this.Controls.Add(this.bomb3);
+            this.Controls.Add(this.bomb2);
+            this.Controls.Add(this.bomb1);
             this.Controls.Add(this.gameState);
             this.Controls.Add(this.enemyPlanes);
             this.Controls.Add(this.myPlanes);
@@ -4151,6 +4184,9 @@
         private System.Windows.Forms.Button my_i_2;
         private System.Windows.Forms.Button my_j_2;
         public System.Windows.Forms.Label gameState;
+        private System.Windows.Forms.Button bomb1;
+        private System.Windows.Forms.Button bomb2;
+        private System.Windows.Forms.Button bomb3;
     }
 }
 

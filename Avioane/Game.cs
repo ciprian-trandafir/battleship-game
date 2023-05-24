@@ -29,6 +29,10 @@ namespace Avioane
                     button.Click += attackEnemy;
                 }
             }
+
+            this.bomb1.Click += attackBomb;
+            this.bomb2.Click += attackBomb;
+            this.bomb3.Click += attackBomb;
         }
 
         public void setNames()
@@ -44,27 +48,29 @@ namespace Avioane
 
         public void loadPlanes(dynamic planes)
         {
-            /*foreach (string plane in planes)
-            {
-                Button button = this.Controls.Find("my_" + plane, true).FirstOrDefault() as Button;
-                button.BackColor = Color.Black;
-            }*/
             int count = planes.Count;
-            int startIndex = Math.Max(0, count - 6); // Determine the starting index for the last six iterations
+            int startIndex = Math.Max(0, count - 1 - int.Parse(planes[count - 1]));
 
-            for (int i = 0; i < count; i++)
+            for (int i = 0; i < count - 1; i++)
             {
-                Button button = this.Controls.Find("my_" + planes[i], true).FirstOrDefault() as Button;
+                string plane = planes[i];
+                Button button = this.Controls.Find("my_" + plane, true).FirstOrDefault() as Button;
 
-                if (i >= startIndex)
+                if (startIndex > 0 && i >= startIndex)
                 {
-                    button.BackColor = Color.Gray; // Set the color to gray for the last six iterations
+                    button.BackColor = Color.Gray;
                 }
                 else
                 {
-                    button.BackColor = Color.Black; // Set the color to black for other iterations
+                    button.BackColor = Color.Black;
                 }
             }
+        }
+
+        private void attackBomb(object sender, EventArgs e)
+        {
+            Button target = sender as Button;
+            this.main.SubmitAttackBomb(target.Name);
         }
 
         private void attackEnemy(object sender, EventArgs e)
