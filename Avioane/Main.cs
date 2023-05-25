@@ -185,6 +185,8 @@ namespace Avioane
                 List<string> resp = JsonConvert.DeserializeObject<List<string>>(response.GetValue<string>());
                 GameForm.Invoke((MethodInvoker)delegate
                 {
+                    Console.WriteLine(resp[0]);
+                    Console.WriteLine(resp[1]);
                     this.GameForm.attackResponse(resp[0], resp[1]);
                 });
             });
