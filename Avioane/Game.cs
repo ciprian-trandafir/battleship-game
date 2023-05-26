@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
@@ -11,6 +12,8 @@ namespace Avioane
     {
         Main main;
         ComponentResourceManager resources;
+        List<string> myBombs = new List<string>();
+        List<string> usedBombs = new List<string>();
 
         public Game(Main main)
         {
@@ -29,6 +32,10 @@ namespace Avioane
                     button.Click += attackEnemy;
                 }
             }
+
+            myBombs.Add("bomb1");
+            myBombs.Add("bomb2");
+            myBombs.Add("bomb3");
 
             this.bomb1.Click += attackBomb;
             this.bomb2.Click += attackBomb;
@@ -67,9 +74,49 @@ namespace Avioane
             }
         }
 
+        public void loadHits(dynamic hits)
+        {
+            for (int i = 0; i < hits.Count; i++)
+            {
+                string hit = hits[i];
+                string[] hitData = hit.Split('?');
+
+                Button button = this.Controls.Find("enemy_" + hitData[0], true).FirstOrDefault() as Button;
+
+                switch (hitData[1])
+                {
+                    case "air":
+                        button.BackgroundImage = ((Image)(resources.GetObject("missed")));
+                        break;
+                    case "hit":
+                        button.BackgroundImage = ((Image)(resources.GetObject("hit")));
+                        break;
+                }
+            }
+        }
+
+        public void loadBombs()
+        {
+            foreach (string bomb in myBombs)
+            {
+                if (!usedBombs.Contains(bomb))
+                {
+                    Console.WriteLine(bomb);
+                    Button button = this.Controls.Find(bomb, true).FirstOrDefault() as Button;
+                    button.Enabled = true;
+                }
+            }
+        }
+
         private void attackBomb(object sender, EventArgs e)
         {
             Button target = sender as Button;
+
+            usedBombs.Add(target.Name);
+            this.bomb1.Enabled = false;
+            this.bomb2.Enabled = false;
+            this.bomb3.Enabled = false;
+
             this.main.SubmitAttackBomb(target.Name);
         }
 
@@ -108,17 +155,30 @@ namespace Avioane
             this.enemyPlanes.Enabled = true;
         }
 
-        public void attackResponse(string status, string target)
+        public void attackResponse(string status, string target, int show_feedback)
         {
-            Button button = this.Controls.Find("enemy_" + target, true).FirstOrDefault() as Button;
-            switch (status)
+            if (show_feedback == 1)
             {
-                case "air":
-                    button.BackgroundImage = ((Image)(resources.GetObject("missed")));
-                    break;
-                case "hit":
-                    button.BackgroundImage = ((Image)(resources.GetObject("hit")));
-                    break;
+                Button button = this.Controls.Find("enemy_" + target, true).FirstOrDefault() as Button;
+                switch (status)
+                {
+                    case "air":
+                        button.BackgroundImage = ((Image)(resources.GetObject("missed")));
+                        break;
+                    case "hit":
+                        button.BackgroundImage = ((Image)(resources.GetObject("hit")));
+                        break;
+                }
+            }
+            else
+            {
+                foreach (Control control in this.enemyPlanes.Controls)
+                {
+                    if (control is Button button)
+                    {
+                        button.BackgroundImage = null;
+                    }
+                }
             }
         }
     }

@@ -4,8 +4,6 @@ using SocketIOClient;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.IO;
-using System.Reflection.Emit;
 using System.Windows.Forms;
 
 namespace Avioane
@@ -185,9 +183,24 @@ namespace Avioane
                 List<string> resp = JsonConvert.DeserializeObject<List<string>>(response.GetValue<string>());
                 GameForm.Invoke((MethodInvoker)delegate
                 {
-                    Console.WriteLine(resp[0]);
-                    Console.WriteLine(resp[1]);
-                    this.GameForm.attackResponse(resp[0], resp[1]);
+                    this.GameForm.attackResponse(resp[0], resp[1], int.Parse(resp[2]));
+                });
+            });
+
+            client.On("load-hits", response =>
+            {
+                List<string> resp = JsonConvert.DeserializeObject<List<string>>(response.GetValue<string>());
+                GameForm.Invoke((MethodInvoker)delegate
+                {
+                    this.GameForm.loadHits(resp);
+                });
+            });
+
+            client.On("load-bombs", response =>
+            {
+                GameForm.Invoke((MethodInvoker)delegate
+                {
+                    this.GameForm.loadBombs();
                 });
             });
 
