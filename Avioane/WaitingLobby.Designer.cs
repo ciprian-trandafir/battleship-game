@@ -72,7 +72,7 @@
             this.Controls.Add(this.lobbyID);
             this.Controls.Add(this.lobbyTitle);
             this.Name = "WaitingLobby";
-            this.Text = "Avioanele • Waiting to enter Lobby";
+            this.Text = "Battleship • Waiting to enter Lobby";
             this.ResumeLayout(false);
             this.PerformLayout();
 

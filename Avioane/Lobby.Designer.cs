@@ -108,7 +108,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Lobby";
-            this.Text = "Avioanele • Lobby";
+            this.Text = "Battleship • Lobby";
             this.ResumeLayout(false);
             this.PerformLayout();
 

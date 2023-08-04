@@ -38,7 +38,7 @@
             // 
             this.createGame.Location = new System.Drawing.Point(12, 159);
             this.createGame.Name = "createGame";
-            this.createGame.Size = new System.Drawing.Size(473, 82);
+            this.createGame.Size = new System.Drawing.Size(417, 82);
             this.createGame.TabIndex = 0;
             this.createGame.Text = "Create Game";
             this.createGame.UseVisualStyleBackColor = true;
@@ -46,9 +46,9 @@
             // 
             // joinGame
             // 
-            this.joinGame.Location = new System.Drawing.Point(12, 377);
+            this.joinGame.Location = new System.Drawing.Point(12, 265);
             this.joinGame.Name = "joinGame";
-            this.joinGame.Size = new System.Drawing.Size(473, 69);
+            this.joinGame.Size = new System.Drawing.Size(417, 69);
             this.joinGame.TabIndex = 1;
             this.joinGame.Text = "Join Game";
             this.joinGame.UseVisualStyleBackColor = true;
@@ -69,20 +69,20 @@
             this.gameLevel.FormattingEnabled = true;
             this.gameLevel.Location = new System.Drawing.Point(57, 114);
             this.gameLevel.Name = "gameLevel";
-            this.gameLevel.Size = new System.Drawing.Size(400, 24);
+            this.gameLevel.Size = new System.Drawing.Size(328, 24);
             this.gameLevel.TabIndex = 3;
             // 
             // Actions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(497, 463);
+            this.ClientSize = new System.Drawing.Size(440, 347);
             this.Controls.Add(this.gameLevel);
             this.Controls.Add(this.playerName);
             this.Controls.Add(this.joinGame);
             this.Controls.Add(this.createGame);
             this.Name = "Actions";
-            this.Text = "Avioanele • Choose action";
+            this.Text = "Battleship • Choose action";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -69,10 +69,9 @@
             this.Controls.Add(this.nameInput);
             this.Controls.Add(this.label1);
             this.Name = "InputName";
-            this.Text = "Avioanele • Player Name";
+            this.Text = "Battleship • Player Name";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

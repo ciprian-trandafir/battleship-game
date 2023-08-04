@@ -3930,7 +3930,7 @@
             this.Controls.Add(this.enemyPlanes);
             this.Controls.Add(this.myPlanes);
             this.Name = "Game";
-            this.Text = "Avioanele";
+            this.Text = "Battleship";
             this.enemyPlanes.ResumeLayout(false);
             this.enemyPlanes.PerformLayout();
             this.myPlanes.ResumeLayout(false);

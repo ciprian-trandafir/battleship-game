@@ -38,7 +38,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(80, 67);
+            this.label1.Location = new System.Drawing.Point(88, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(243, 38);
             this.label1.TabIndex = 0;
@@ -46,14 +46,14 @@
             // 
             // gameID
             // 
-            this.gameID.Location = new System.Drawing.Point(97, 216);
+            this.gameID.Location = new System.Drawing.Point(109, 231);
             this.gameID.Name = "gameID";
             this.gameID.Size = new System.Drawing.Size(192, 22);
             this.gameID.TabIndex = 1;
             // 
             // submitGameID
             // 
-            this.submitGameID.Location = new System.Drawing.Point(111, 374);
+            this.submitGameID.Location = new System.Drawing.Point(120, 374);
             this.submitGameID.Name = "submitGameID";
             this.submitGameID.Size = new System.Drawing.Size(165, 54);
             this.submitGameID.TabIndex = 2;
@@ -81,7 +81,7 @@
             this.Controls.Add(this.gameID);
             this.Controls.Add(this.label1);
             this.Name = "JoinLobby";
-            this.Text = "Aviaonele • Join Lobby";
+            this.Text = "Battleship • Join Lobby";
             this.ResumeLayout(false);
             this.PerformLayout();
 
